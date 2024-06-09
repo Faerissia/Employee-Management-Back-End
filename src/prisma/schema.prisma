@@ -1,0 +1,27 @@
+generator client {
+  provider        = "prisma-client-js"
+  output          = "./generated/prisma-client"
+  previewFeatures = ["filterJson", "fullTextIndex", "fullTextSearch"]
+  binaryTargets   = ["native", "rhel-openssl-1.0.x"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model EMPLOYEE {
+  id              Int       @id @unique(map: "EMPLOYEE_ID") @default(autoincrement())
+  uuid            String    @unique(map: "EMPLOYEE_UUID") @db.VarChar(50)
+  first_name      String?   @db.VarChar(255)
+  last_name       String?   @db.VarChar(255)
+  gender          Int?
+  birth_day       DateTime? @db.Date
+  address         String?   @db.VarChar(255)
+  sub_district    String?   @db.VarChar(255)
+  district        String?   @db.VarChar(255)
+  province        String?   @db.VarChar(255)
+  expired_id_card DateTime? @db.Date
+  created_date    DateTime? @db.DateTime(0)
+  updated_date    DateTime  @db.DateTime(0)
+}
