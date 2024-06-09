@@ -1,0 +1,222 @@
+{
+	"info": {
+		"_postman_id": "6e8e4709-febb-4b3e-abb8-16105361dd3b",
+		"name": "100Star-Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26200340",
+		"_collection_link": "https://nftp-employee-management.postman.co/workspace/My-Workspace~dd249c07-d58b-443f-8491-12859f0ed010/collection/26200340-6e8e4709-febb-4b3e-abb8-16105361dd3b?action=share&source=collection_link&creator=26200340"
+	},
+	"item": [
+		{
+			"name": "check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/check",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"check"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "check - success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/check",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"check"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "61"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3d-Z8u+u2istjTz4BPRvfEM6GxSkRI\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 08 Jun 2024 09:05:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"NOW()\": \"2024-06-08T09:05:21+00:00\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "getEmployee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/employee/get?employee_uuid=76a9fce0-64ed-4c13-8828-14fb6b53adc5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"employee",
+						"get"
+					],
+					"query": [
+						{
+							"key": "employee_uuid",
+							"value": "76a9fce0-64ed-4c13-8828-14fb6b53adc5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getEmployeeList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/employee/get-list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"employee",
+						"get-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createEmployee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"Sirirat\",\r\n    \"last_name\": \"Petcharat\",\r\n    \"gender\": 2,\r\n    \"birth_day\": \"1993-06-15T00:00:00.000Z\",\r\n    \"address\": \"678/9 หมู่ 5\",\r\n    \"sub_district\": \"หัวหิน\",\r\n    \"district\": \"หัวหิน\",\r\n    \"province\": \"ประจวบคีรีขันธ์\",\r\n    \"expired_id_card\": \"2029-06-15T00:00:00.000Z\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/employee/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"employee",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateEmployee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"Nontaphat\",\r\n    \"last_name\": \"Ruaklittichat\",\r\n    \"gender\": 2, // 1 male, 2 female, 3 other\r\n    \"birth_day\": \"2000-05-26T00:00:00.000Z\",\r\n    \"address\": \"320/1 หมู่ 4\",\r\n    \"sub_district\": \"ปากแรต\",\r\n    \"district\": \"บ้านโป่ง\",\r\n    \"province\": \"ราชบุรี\",\r\n    \"expired_id_card\": \"2025-05-26T00:00:00.000Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/employee/update/76a9fce0-64ed-4c13-8828-14fb6b53adc5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"employee",
+						"update",
+						"76a9fce0-64ed-4c13-8828-14fb6b53adc5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteEmployee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/employee/delete/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"employee",
+						"delete",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
