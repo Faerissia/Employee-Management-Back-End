@@ -1,6 +1,6 @@
 # Employee Management Back-End
 
-A brief description of your project, its purpose, and what it does.
+Project from assignment
 
 ## Prerequisites
 
@@ -45,6 +45,6 @@ A brief description of your project, its purpose, and what it does.
 
 # API Postman
 
-- I've put the postman_collection in this too you can check it!
+- I've put the `postman_collection` in this too you can check it!
 
 # Enjoy!
