@@ -1,3 +1,19 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : MY_SERVER
+ Source Server Type    : MySQL
+ Source Server Version : 80400 (8.4.0)
+ Source Host           : 192.168.1.111:3306
+ Source Schema         : HR_EMPLOYEE
+
+ Target Server Type    : MySQL
+ Target Server Version : 80400 (8.4.0)
+ File Encoding         : 65001
+
+ Date: 10/06/2024 15:35:30
+*/
+
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
@@ -22,7 +38,7 @@ CREATE TABLE `EMPLOYEE`  (
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `EMPLOYEE_UUID`(`uuid` ASC) USING BTREE,
   UNIQUE INDEX `EMPLOYEE_ID`(`id` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 67 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of EMPLOYEE
